@@ -7,6 +7,6 @@ public class SomeCircle {
 
 
 	public String toString(){
-		return "Радіус вашого круга = " + radius + "; його площа = " + S + " а периметр = " + L;
+		return "Yours circle radius = " + radius + "; its area = " + S + " and perimeter = " + L;
 	}
 }
