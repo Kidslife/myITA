@@ -40,7 +40,7 @@ public class PracticalTask2Employee {
 		this.salary = salary;
 	}
 
-	public boolean containsNumber(List<PracticalTask2Employee> list, int dep) {
+	public boolean containsNumber(int dep) {
 		PracticalTask2Employee object = new PracticalTask2Employee(name, departmentNumber, salary);
 		if (object.getDepartmentNumber() == dep) {
 			System.out.println(object.toString());

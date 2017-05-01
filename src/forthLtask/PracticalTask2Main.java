@@ -28,7 +28,7 @@ public class PracticalTask2Main {
 		System.out.println("Enter department number from 1 to 3: ");
 		int dep = new Scanner(System.in).nextInt();
 		for (PracticalTask2Employee e : Elist) {
-			e.containsNumber(Elist, dep);
+			e.containsNumber(dep);
 		}
 
 		Collections.sort(Elist, PracticalTask2Employee.CompareSalary.s);
