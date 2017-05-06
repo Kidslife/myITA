@@ -3,8 +3,6 @@ package forthLtask;
 import java.util.Comparator;
 import java.util.List;
 
-
-
 public class PracticalTask2Employee {
 	private String name;
 	private int departmentNumber;
@@ -14,6 +12,10 @@ public class PracticalTask2Employee {
 		this.name = name;
 		this.departmentNumber = departmentNumber;
 		this.salary = salary;
+	}
+
+	public PracticalTask2Employee() {
+
 	}
 
 	public String getName() {
@@ -41,9 +43,9 @@ public class PracticalTask2Employee {
 	}
 
 	public boolean containsNumber(int dep) {
-		PracticalTask2Employee object = new PracticalTask2Employee(name, departmentNumber, salary);
-		if (object.getDepartmentNumber() == dep) {
-			System.out.println(object.toString());
+		PracticalTask2Employee ourObject = new PracticalTask2Employee(name, departmentNumber, salary);
+		if (ourObject.getDepartmentNumber() == dep) {
+			System.out.println(ourObject.toString());
 			return true;
 		}
 		return false;
@@ -56,19 +58,16 @@ public class PracticalTask2Employee {
 				+ "]";
 	}
 
-	
-	public static class CompareSalary implements Comparator <PracticalTask2Employee> {
+	public static class CompareSalary implements Comparator<PracticalTask2Employee> {
 		public final static CompareSalary s = new CompareSalary();
-			
+
 		@Override
 		public int compare(PracticalTask2Employee emp1, PracticalTask2Employee emp2) {
-			
-			return emp2.salary.compareTo(emp1.salary) ;
+
+			return emp2.salary.compareTo(emp1.salary);
 		}
 
-		
 	}
-   
 
 	public String LandK() {
 		String L = null;
@@ -82,4 +81,3 @@ public class PracticalTask2Employee {
 		return L + " is a big " + K;
 	}
 }
-

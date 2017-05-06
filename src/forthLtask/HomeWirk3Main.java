@@ -26,7 +26,7 @@ public class HomeWirk3Main {
 			if (hw3[i] > 0) {
 				occctr++;
 				if (occctr == 2) {
-					System.out.println("Second positive number is in " + i + " position");
+					System.out.println("Second positive number is in " + (i + 1) + " position");
 
 				}
 

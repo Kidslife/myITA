@@ -3,7 +3,7 @@ package forthLtask;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class HomeWork2Main {
+public class HomeWork2Main { // rewrite this
 	public static void main(String[] args) {
 
 		int[] hw2 = new int[10];
@@ -22,30 +22,27 @@ public class HomeWork2Main {
 			System.out.print(" " + i + " ");
 		}
 		System.out.println("]");
-		
+
 		int sum = 0;
-		int sum2 =0;
+		int sum2 = 0;
 		int i = 0;
-		int[] hw2sum = Arrays.copyOfRange(hw2, 0, 5);
-		while (i < hw2sum.length) {
-			if (hw2sum[i] >= 0) {
-				for (int isum = 0; isum < hw2sum.length; isum++) {
-					sum += hw2sum[isum];
-					i++;
+		
+			if (hw2[i] >= 0) {
+				for (i = 0; i < 5; i++) {
+					sum += hw2[i];
 
 				}
 				System.out.println("Sum of first five elements is: " + sum);
-			} else if (hw2sum[i] < 0) {
-				int[] hw2sum2 = Arrays.copyOfRange(hw2, 5, hw2.length);
-				for (int isum2 = 0; isum2 < hw2sum2.length; isum2++) {
-					sum2 += hw2sum2[isum2];
-					i++;
+				
+			} else if (hw2[i] < 0) {
+
+				for (i = 10; i > 5; i--) {
+					sum2 += hw2[i];
+
 				}
 				System.out.println("Sum of last five elements is: " + sum2);
 			}
-
-		}
-
+		
 	}
 
 }

@@ -1,12 +1,14 @@
 package student;
 
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 import student.Group;
 import student.Student;
 import student.StudentService2;
 
-public class Main {									//not all done yet
+public class Main { // not all done yet   переробити в студсерв2 замість масиву зробити ліст
 
 	public static void main(String[] args) {
 		Group g1 = Group.G1;
@@ -44,15 +46,32 @@ public class Main {									//not all done yet
 		Student[] std = new Student[stud.size()];
 		stud.toArray(std);
 		studService2.setStudents(std);
-		System.out.println(studService2.getTheBestStudentByRank(g1));
+		//System.out.println(studService2.getTheBestStudentByRank(g1));
 		
-		for (Student iterstd : stud) {
-			if (iterstd.lessThan(1)) {
-				
-				System.out.println(iterstd);
+
+		
+		//studService2.removeStudent();
+		//System.out.println(studService2.getStudents());
+		
+
+		
+		List<Student> l = new ArrayList<>();
+		
+		l.add(stud1);
+		l.add(stud2);
+		
+		Iterator<Student> iter = l.iterator();
+		while(iter.hasNext()){
+			Student i = iter.next();
+			if (i.lessThan(1)){
+				iter.remove();
 			}
 		}
 		
+		System.out.println(l);
+		
+		Student[] sss = {stud1, stud2};
+
 	}
 
 }
